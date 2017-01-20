@@ -4,14 +4,16 @@
   "description": "A simple project which uses webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "dist": "webpack --config webpack-production.config.js -p"
   },
   "keywords": [
     "webpack"
   ],
   "author": "Codes and Tags",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.0.15",
     "babel-loader": "^6.2.10",
@@ -39,6 +41,7 @@
     "gulp-uglify": "^1.0.1",
     "gulp-useref": "^3.0.0",
     "run-sequence": "^1.0.1",
+    "strip-loader": "^0.1.2",
     "webpack": "^1.14.0"
   }
 }
