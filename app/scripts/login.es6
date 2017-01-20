@@ -1,4 +1,5 @@
 const description = 'This file use ES6 features! :D';
+const errorMessage = 'This is an error';
 
 console.log('This is the login file!');
 console.log(`Description : ${description}`);
@@ -12,3 +13,4 @@ function login(user, pass) {
 }
 
 login('admin', 'cocox');
+console.error(errorMessage);

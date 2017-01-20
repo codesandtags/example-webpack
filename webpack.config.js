@@ -6,6 +6,13 @@ module.exports = {
     watch: true,
 
     module: {
+        preLoaders: [
+            {
+                test: /\.es6|.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader"
+            }
+        ],
         loaders: [
             {
                 test: /\.es6$/,
