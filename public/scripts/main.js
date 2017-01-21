@@ -10,3 +10,4 @@ login('admin', 'coco');
 require('../styles/main.css');
 require('../styles/feature.scss');
 require('../styles/bootstrap.min.css');
+require('../styles/font-awesome.min.css');
