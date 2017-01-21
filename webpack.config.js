@@ -1,14 +1,23 @@
+const path = require('path');
+
 module.exports = {
-    entry: ["./app/scripts/main.js", "./app/scripts/utils.es6"],
+    context: path.resolve('./public/scripts'),
+    entry: ["./main.js", "./utils.es6"],
+
     output: {
-        filename: "./app/scripts/bundle.js"
+        publicPath: '/scripts/',  /* This is the virtual path */
+        path: path.resolve('./public/scripts/'), /* This is the real output path */
+        filename: "bundle.js"
     },
-    watch: true,
+
+    devServer: {
+        contentBase: 'public'
+    },
 
     module: {
         preLoaders: [
             {
-                test: /\.es6|.js$/,
+                test: /\.(es6|js)$/,
                 exclude: /node_modules/,
                 loader: "eslint-loader"
             }
@@ -25,5 +34,7 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.js', '.es6']
-    }
+    },
+
+    watch: true,
 };
