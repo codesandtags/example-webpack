@@ -1,7 +1,32 @@
-.sparta {
+.esparta {
   border: 3px solid red;
 
-  .spartano {
+  background: #f8fffd;
+  transition: background 2s; /* For Safari 3.1 to 6.0 */
+
+  /*
+  animation-duration: 1s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  */
+
+  &:hover {
+    background: #0baa08;
+  }
+
+  .espartano {
     font-size: 40px;
+    text-align: center;
+
+    .warrior {
+      display: block;
+    }
+  }
+}
+
+@keyframes changewidth {
+  100% {
+    transform: rotate(360deg);
   }
 }
