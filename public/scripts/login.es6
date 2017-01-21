@@ -12,5 +12,4 @@ let login = function(user, pass) {
     }
 };
 
-console.error(errorMessage);
 export {login};

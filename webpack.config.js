@@ -5,7 +5,7 @@ module.exports = {
     entry: ["./main.js", "./utils.es6"],
 
     output: {
-        publicPath: '/scripts/',  /* This is the virtual path */
+        publicPath: '/scripts/', /* This is the virtual path */
         path: path.resolve('./public/scripts/'), /* This is the real output path */
         filename: "bundle.js"
     },
@@ -17,7 +17,7 @@ module.exports = {
     module: {
         preLoaders: [
             {
-                test: /\.(es6|js)$/,
+                test: /\.es6$/,
                 exclude: /node_modules/,
                 loader: "eslint-loader"
             }
@@ -27,7 +27,16 @@ module.exports = {
                 test: /\.es6$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
-
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader!sass-loader"
             }
         ]
     },
