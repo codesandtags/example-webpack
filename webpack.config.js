@@ -46,7 +46,7 @@ module.exports = {
             {
                 test: /\.(png|jpg)$/,
                 exclude: /node_modules/,
-                loader: 'url-loader?limit=100000'
+                loader: 'url-loader?limit=1000'
             },
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
