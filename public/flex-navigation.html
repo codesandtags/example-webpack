@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack Bundler Example</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="top">
+        <h1>This is Sparta!</h1>
+    </header>
+
+    <nav class="flex-nav">
+        <a href="#" class="toggle-nav"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+            <li><a href="#">Item 6</a></li>
+            <li class="social"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+            </a></li>
+            <li class="social"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a></li>
+            <li class="social"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+            </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <img src="http://d14dsi4x2zx6ql.cloudfront.net/sites/default/files/styles/welcome_image/public/VCW_D_SiliconValley_Hero_20140708_Google_19%20copy-1280x642_0.jpg"
+             class="with-border">
+    </section>
+
+    <section>
+        <p>Los pollitos dicen, 🐤 🐤 🐤</p>
+    </section>
+
+    <footer>
+        Codes and tags &copy; 2017
+    </footer>
+</div>
+
+<script src="./assets/bundle.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script>
+
+    $(function() {
+        $('.toggle-nav').on('click', function() {
+            $('.flex-nav ul').toggleClass('open');
+        });
+    });
+
+</script>
+</body>
+</html>

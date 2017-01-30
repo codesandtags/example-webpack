@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .esparta {
   border: 3px solid red;
 
@@ -104,4 +112,124 @@ $base-color: #000;
 
 .box img {
   display: none;
+}
+
+a {
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 20px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: "Helvetica";
+  color: white;
+  background: rgba(41, 41, 41, 0.6);
+}
+
+a:hover {
+  background: rgba(18, 18, 58, 0.35);
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.flex-nav ul {
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+img {
+  width: 80%;
+}
+
+.with-border {
+  border: 10px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-nav {
+  display: none;
+}
+
+header {
+  text-align: center;
+  color: white;
+  font-family: "Courier New";
+}
+
+section, footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-weight: 200;
+  padding: 20px;
+}
+
+@media all and (max-width: 850px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 1 25%;
+  }
+
+  .container-navigation img {
+    border: 5px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media all and (max-width: 500px) {
+
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper > * {
+    order: 999;
+  }
+
+  .flex-nav {
+    order: 1;
+  }
+
+  .toggle-nav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+
+  }
+
 }

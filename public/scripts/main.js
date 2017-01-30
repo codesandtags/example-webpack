@@ -9,5 +9,5 @@ login('admin', 'coco');
 // Adding styles
 require('../styles/main.css');
 require('../styles/feature.scss');
-require('../styles/bootstrap.min.css');
+//require('../styles/bootstrap.min.css');
 require('../styles/font-awesome.min.css');
