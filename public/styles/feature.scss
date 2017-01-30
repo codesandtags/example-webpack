@@ -38,28 +38,70 @@
   height: 280px;
 }
 
-.box{
+$base-color: #000;
+
+.box1 {
+  background: $base-color
+}
+
+.box2 {
+  background: lighten($base-color, 5%)
+}
+
+.box3 {
+  background: lighten($base-color, 15%)
+}
+
+.box4 {
+  background: lighten($base-color, 25%)
+}
+
+.box5 {
+  background: lighten($base-color, 35%)
+}
+
+.box6 {
+  background: lighten($base-color, 45%)
+}
+
+.box7 {
+  background: lighten($base-color, 55%)
+}
+
+.box8 {
+  background: lighten($base-color, 65%)
+}
+
+.box9 {
+  background: lighten($base-color, 70%)
+}
+
+.box10 {
+  background: lighten($base-color, 75%)
+}
+
+.box {
   color: white;
   font-size: 100px;
   text-align: center;
-  padding: 10px;
-  text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  padding: 5px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  flex-basis: 200px;
 }
 
-.box1{ background: #333}
-.box2{ background: #444}
-.box3{ background: #555}
-.box4{ background: #666}
-.box5{ background: #777}
-.box6{ background: #888}
-.box7{ background: #999}
-.box8{ background: #AAA}
-.box9{ background: #BBB}
-.box10{ background: #CCC}
-
-.container-box{
+.container-box {
   display: flex;
-  border:5px solid red;
-  min-height: 100vh;
+  border: 5px solid red;
+  flex-wrap: wrap;
+  height: 100vh;
   flex-direction: column;
+}
+
+.box7 {
+  flex-grow: 5;
+}
+
+.box img {
+  display: none;
 }
